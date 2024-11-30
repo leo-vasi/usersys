@@ -1,0 +1,486 @@
+/*//////////////////
+////// Geral ///////
+//////////////////*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Fundo de vídeo*/
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video-background video {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+/* Cabeçalho e navegação */
+header {
+    padding: 20px 0;
+    background-color: #0e0909;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+.menu {
+    text-align: right;
+}
+
+.menu a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 15px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #34ca77;
+}
+
+
+/*////////////////////
+////// index.html ////
+////////////////////*/
+#index-page .content-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    max-width: 900px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 40px;
+    margin: 50px auto;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+#index-page .left-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+#index-page .left-section p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+}
+
+#index-page .right-section img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 5px;
+}
+
+#index-page .start-button {
+    display: inline-block;
+    text-align: center;
+    width: auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #06cc52;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.start-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+
+#index-page .start-button:hover {
+    background-color: #00b31e;
+    transform: scale(1.05);
+}
+
+/*//////////////////////////
+/////// management.html ////
+/////////////////////////*/
+body#management-page {
+    color: #fff;
+}
+
+/* Título da página */
+#management-page .page-title {
+    color: #34ca77;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Estilo para a seção de busca e filtros */
+.search-filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    gap: 10px;
+}
+
+.search-filter label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.search-filter select,
+.search-filter input[type="text"] {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+}
+
+.search-filter button {
+    padding: 10px 20px;
+    background-color: #34ca77;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-filter button:hover {
+    background-color: #28a066;
+}
+
+/* Botão de adicionar usuário */
+#addUserButtonContainer {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+#addUserButtonContainer button {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #34ca77;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#addUserButtonContainer button img {
+    margin-right: 10px;
+    width: 24px;
+    height: auto;
+}
+
+#addUserButtonContainer button:hover {
+    background-color: #28a066;
+    transform: scale(1.05);
+}
+
+/* Formulário de edição */
+#editFormContainer {
+    margin: 30px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#editFormContainer h2 {
+    color: #34ca77;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ddd;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+    font-size: 14px;
+}
+
+.form-control:focus {
+    border-color: #66afe9;
+    outline: none;
+    background-color: #333;
+}
+
+.toggle-password-btn {
+    margin-left: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.toggle-password-btn img {
+    width: 20px;
+    height: auto;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #34ca77;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #28a066;
+}
+
+.btn-secondary {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #c82333;
+}
+
+/* Estilo da tabela de usuários */
+table {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#management-page th {
+    background: linear-gradient(45deg, #00ffb39d, #047700);
+    color: white;
+    font-weight: bold;
+}
+
+table thead th {
+    padding: 10px;
+    background-color: #222;
+    color: #34ca77;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    border-bottom: 2px solid #34ca77;
+}
+
+table tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #444;
+    font-size: 14px;
+}
+
+table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Estilo para o botão de visualizar senha */
+.show-password-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.show-password-btn img {
+    width: 40px;
+    height: auto;
+    display: block;
+}
+
+#management-page .edit-button,
+#management-page .delete-button {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#management-page .edit-button:hover,
+#management-page .delete-button:hover {
+    transform: scale(1.1);
+}
+
+
+/*/////////////////////////////////////////////
+/////////// registration.html /////////////////
+/////////////////////////////////////////////*/
+.page-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    align-self: center;
+}
+/*Container do formulário de registro */
+#registration-form {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: #fff;
+}
+
+/* Título do formulário */
+#registration-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #34ca77;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Grupo de formulários */
+#registration-form .form-group {
+    margin-bottom: 15px;
+}
+
+/* Labels */
+#registration-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #b8b8b8;
+}
+
+/* Inputs de texto */
+#registration-form input[type="text"],
+#registration-form input[type="date"],
+#registration-form input[type="email"],
+#registration-form input[type="password"],
+#registration-form select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Foco nos inputs */
+#registration-form input[type="text"]:focus,
+#registration-form input[type="date"]:focus,
+#registration-form input[type="email"]:focus,
+#registration-form input[type="password"]:focus,
+#registration-form select:focus {
+    border-color: #34ca77;
+}
+
+/* Botões do formulário */
+#registration-form .form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Botão principal (Cadastrar) */
+#registration-form .btn-primary {
+    background-color: #34ca77;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#registration-form .btn-primary:hover {
+    background-color: #2ea964;
+}
+
+/* Botão secundário (Cancelar) */
+#registration-form .btn-secondary {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#registration-form .btn-secondary:hover {
+    background-color: #c82333;
+}
+
+
+

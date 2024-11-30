@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<header>
+    <div class="center">
+        <a href="index.html" class="logo">
+            <img src="assets/img/cicada-logo.png" alt="Logo">
+        </a>
+        <h1 class="page-title">Cadastrar novo Usuário</h1>
+    </div>
+</header>
+<div class="video-background">
+    <video autoplay loop muted playsinline>
+        <source src="assets/videos/tecnologia.mp4" type="video/mp4">
+        Seu navegador não suporta o elemento de vídeo.
+    </video>
+</div>
+<body>
+
+<!-- Aqui mostra o formulário de cadastro -->
+<div id="registration-form">
+    <h2>Cadastro de Usuário</h2>
+    <form id="form-registration">
+        <div class="form-group">
+            <label for="reg-name">Nome</label>
+            <input type="text" id="reg-name" required pattern="[A-Za-z\s]" maxlength="50" title="Apenas letras, nada de caracteres especiais ou números">
+        </div>
+        <div class="form-group">
+            <label for="reg-surname">Sobrenome</label>
+            <input type="text" id="reg-surname" required pattern="[A-Za-z\s]+" maxlength="50" title="Apenas letras, nada de números ou cacarateres especiais">
+        </div>
+        <div class="form-group">
+            <label for="reg-birth-date">Data de Nascimento</label>
+            <input type="date" id="reg-birth-date" required>
+        </div>
+        <div class="form-group">
+            <label for="reg-cpf">CPF</label>
+            <input type="text" id="reg-cpf" required pattern="\d{11}" maxlength="11" title="Apenas 11 números, nada de letras ou caracteres especiais">
+        </div>
+        <div class="form-group">
+            <label for="reg-gender">Gênero</label>
+            <select id="reg-gender">
+                <option value="M">Masculino</option>
+                <option value="F">Feminino</option>
+                <option value="O">Outro</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="reg-phone">Número de Celular</label>
+            <input type="text" id="reg-phone" required pattern="\d+" maxlength="15" title="Apenas números são permitidos">
+        </div>
+        <div class="form-group">
+            <label for="reg-email">E-mail</label>
+            <input type="email" id="reg-email" required>
+        </div>
+        <div class="form-group">
+            <label for="reg-password">Senha</label>
+            <input type="password" id="reg-password" required minlength="4" maxlength="16" title="A senha deve ter no mínimo 6 caracteres e no máximo 16">
+        </div>
+        <div class="form-actions">
+            <button type="button" class="btn btn-primary" onclick="registerUser()">Cadastrar</button>
+            <button type="button" class="btn btn-secondary" onclick="cancelRegistration()">Cancelar</button>
+        </div>
+    </form>
+</div>
+</body>
+<script src="assets/scripts/script_registration.js"></script>
+</html>
